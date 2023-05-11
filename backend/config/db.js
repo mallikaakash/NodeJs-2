@@ -8,14 +8,14 @@ const uri =
 const connectDB = async() => {
   try{
     const conn = await mongoose.connect(uri)
-    console.log(`MongoDB connected: ${conn.connection.host}`.cyan.underline)
+    console.log(`MongoDB connected: ${conn.connection.host}`)
   } catch(error){
     console.log(error);
     process.exit(1)
   }
 }
 
-connectDB();
+// connectDB()
 // // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 // const client = new MongoClient(uri, {
 //   serverApi: {
@@ -39,3 +39,5 @@ connectDB();
 //   }
 // }
 // run().catch(console.dir);
+
+module.exports = connectDB
