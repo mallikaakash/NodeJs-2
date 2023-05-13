@@ -40,4 +40,4 @@ const connectDB = async() => {
 // }
 // run().catch(console.dir);
 
-module.exports = connectDB
+module.exports = connectDB;
